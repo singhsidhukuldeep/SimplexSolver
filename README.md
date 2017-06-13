@@ -1,0 +1,2 @@
+# SimplexSolver
+Using Simplex Algo
