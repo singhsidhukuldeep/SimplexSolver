@@ -24,7 +24,7 @@ _You will just need a browser to run the solver._
 3. Or you can directly visit [Simplex Solver](http://kuldeepsinghsidhu.esy.es/SimplexSolver)
 `kuldeepsinghsidhu.esy.es/SimplexSolver`
 
-![Landiing Page](http://github.com/singhsidhukuldeep/SimplexSolver/)
+![Landing Page](https://github.com/singhsidhukuldeep/SimplexSolver/raw/master/SimplexSolver/landing_page.png)
 
 ## Usage
 
