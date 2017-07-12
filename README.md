@@ -24,7 +24,7 @@ _You will just need a browser to run the solver._
 3. Or you can directly visit [Simplex Solver](http://kuldeepsinghsidhu.esy.es/SimplexSolver)
 `kuldeepsinghsidhu.esy.es/SimplexSolver`
 
-## Using
+## Usage
 
 Use of this system is pretty intuitive: Press "`Example`" to see an example of a linear programming problem already set up. 
 Then modify the example or enter your own linear programming problem in the space below using the same format as the example, and press "`Solve`"
@@ -49,9 +49,91 @@ are located in `assets` which uses _bootstrap_
 - `SimplexAlgorithm.pdf`: Is the Article on Simplex Algorithm.
 - `assets/js/Solver/simplex.js`: Contains all the functions as _JavaScript_ that Solve the Linear Optimization Problems.
 
-### `assets/js/Solver/simplex.js`
+### `assets/js/Solver/simplex.js` 
 
+_This is the complete SOLVER_
 
+**functions:**
+- `function sesame(url,hsize,vsize)`
+Form utilities to print in the form
+- `function doIt()`
+Checks which button is pressed and calls the functions accordingly.
+- `function simplexMethod(InMatrix, rows, cols)`
+Simplex starts here.
+- `function pivot(InMatrix,rows,cols,theRow,theCol)`
+Makes the point in the `InMatrix` as pivot.
+- `function parser (InString, Sep)`
+returns an array 0th entry = number n of blocks (-1) if the character Sep does not occur
+subsequent n entries are the blocks themselves
+Here are the blocks
+***block 1 *** SEP *** block 2 *** SEP *** block 3 ***
+(one more block than number of occurrences of SEP)
+- `function parseLinearExpr(InString)`
+Returns an array: with 0th entry = an array of variable names 
+(eg. `["x", "x'", "y", "z"]`)
+and subsequent entries the coefficients.
+to get the number of coefficients, just take the length of the array in position 0.
+first remove a leading cr if 
+- `function SetupTableau()`
+reads problem and sets up the first tableau
+- `function rightString (InString, num)`
+Returns a sub string from position `num` till the end of `InString`
+- `function rightTrim (InString)`
+Removes last character in the `InString`
+- `function replaceChar (InString,oldSymbol,newSymbol)`
+In `InString` searches for `oldSymbol` and replaces it with `newSymbol`
+- `function replaceSubstring (InString,oldSubstring,newSubstring)`
+In `InString` searches for `oldSubstring` and replaces it with `newSubstring`
+- `function makeInteger(theMatrix, RowNum, ColNum,Strings)`
+Makes a matrix integer by least common multiples of rows
+returms a matrix of STRINGS `if Strings = true` `else gives integers
+input = a matrix of real floats`
+also records the row lcm of row i in outArray[i][0]
+- `function toFrac(x, maxDenom, tol)`:
+tolerance is the largest errror you will tolerate before resorting to 
+expressing the result as the input decimal in fraction form
+suggest no less than 10^-10, since we round all to 15 decimal places.
+- `function toFracArr(x, maxDenom, tol)`:
+identical to `toFrac`, except this returns an `array [1] = numerator`;  `[2] = denom` rather than a string.
+- `function isCharHere (InString, RefString)`
+Checks whether its a character or a string (Single digit or a larger number)
+- `function checkString(InString,subString,backtrack)`
+check for subString
+`if backtrack = false`, `returns -1` if not found, and left-most location in string if found
+`if backtrack = true`, `returns -1` if not found, and right-most location in string if found
+note that location is to the left of the substring in both cases
+- `function looksLikeANumber(theString)`
+Returns true if theString looks like it can be evaluated i.e. if it is a string with just numeric characters.
+- `function roundSix(theNumber)`
+Rounds to six digits.
+- `function roundSigDig(theNumber, numDigits)`
+Rounds `theNumber` till `numDigits`
+- `function shiftRight(theNumber, k)`
+Shifts decimal k places to the right.
+- `function reduce(fraction)`:
+Reduces a fraction using `function hcf (a,b)`
+-  `function hcf (a,b)`:
+Takes `input` as two numbers and converts them into possitive and calculates HCF (Highest Common Factor)
+- `function lcm(a,b)`:
+Takes `input` as two numbers and converts them into possitive and calculates LCM (Lowest Common Multiplier)
+- `function lastChar(theString)`
+Returns the last Character in the string.
+- `function displayMatrix(number)`
+Displays Tableau
+- `function makeArray3 (X,Y,Z)`
+Makes 3 Dimensional Tableau
+- `function makeArray2 (X,Y)`
+Makes 2 Dimensional Tableau
+- `function makeArray (Y)`
+Makes 1 Dimensional Tableau
+- `function stripSpaces (InString)`
+Removes Spaces in `InString`
+- `function stripChar (InString,symbol)`
+Removes `symbol` from `InString` if present
+- `function myErrorTrap(message,url,linenumber)`: 
+This gives error alert in case the program crashes.
+- `function displayFinalStatus()`
+Gives the solution or the error messages.
 
 ## CREDITS
 Kuldeep Singh Sidhu
