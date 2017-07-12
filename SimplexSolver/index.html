@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <title>Simplex Solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <script type="text/javascript" src="assets/js/Solver/simplex.js"></script>
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          </button>
+          <a class="brand" href="https://kuldeepsinghsidhu.esy.es/SimplexSolver">SIMPLEX SOLVER</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="https://kuldeepsinghsidhu.esy.es/SimplexSolver">Home</a>
+              </li>
+              <li class="">
+                <a href="https://kuldeepsinghsidhu.esy.es/SimplexSolver/AboutSimplex.html">Simplex Algo</a>
+              </li>
+              <li class="">
+                <a href="http://kuldeepsinghsidhu.esy.es">About Us</a>
+              </li>
+              <li class="">
+                <a href="http://kuldeepsinghsidhu.esy.es">Developer (Kuldeep Singh Sidhu)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="jumbotron masthead">
+  <div class="container">
+  	<br><br>
+    <h1>Simplex algorithm</h1>
+    <p>In mathematical optimization, Dantzig's simplex algorithm (or simplex method) is a popular algorithm for linear programming <a href="AboutSimplex.html">Learn More...</a></p>
+    
+  </div>
+</div>
+
+<br><br>
+
+
+<!--#########################################-->
+<center>
+<form name="theSpreadsheet">
+<h1>Simplex Solver</h1>
+
+
+<table  class="table-striped active">
+
+<tr>
+
+<td align = center>
+
+Type your linear programming problem below. (Press "Example" to see how to set it up.)
+
+<br>
+
+<textarea style="min-width: 100%" class="form-control input-sm" name = "input" rows = 5 cols = 80>
+</textarea>
+
+</td>
+
+</tr>
+
+
+
+
+<tr><td><center><br>Mode: <select style="min-width: 80%" NAME = "Mode" SIZE = 3> 
+
+	<OPTION SELECTED>Decimal</OPTION>
+
+	<OPTION>Fraction</OPTION>
+
+	<OPTION>Integer</OPTION>
+
+	</SELECT>
+
+</center></td></tr>
+
+<tr><td><center>Rounding (significant digits): <input type=text size=2 value="6" name="acc"></center></td></tr>
+
+<tr><td align = center>Solution:<br><b><input style="min-width: 100%; text-align:center;" type=text size=80 disabled name="expr" value = "Optimal solution will appear here."></b>
+
+<br>
+
+<input type="button" class="btn btn-primary btn-small" value = "Solve" onClick="doIt(2); doIt(1)"> &nbsp;
+
+<input type="button" class="btn btn-primary btn-small" value = "Example" onClick="doIt(5)"> &nbsp;
+
+<input type="button" class="btn btn-primary btn-mini" value = "Erase Everything" onClick="doIt(3)"> &nbsp;
+
+<br>
+
+
+<tr>
+
+<td align = center>
+
+The tableaus (steps) will appear here.
+
+<br>
+
+<textarea style="min-width: 100%" name = "output" rows = 12 cols = 80>
+
+</textarea>
+
+</td>
+
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+
+
+<center>
+
+<p><font color = "008822"><b>Disclaimer: </b></font>This page was created for educational purposes only. Its author is not responsible for any inaccuracies or errors in the results.
+
+
+</center>
+<center>
+<div class="jumbotron masthead">
+  <div class="container">
+  	<br>
+    
+      <a href="https://github.com/singhsidhukuldeep/SimplexSolver" class="btn btn-primary btn-large" >Download Solver</a>
+    
+    <ul class="masthead-links">
+      <li>
+        <a href="https://github.com/singhsidhukuldeep" >GitHub Profile</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/kuldeep-singh-sidhu-96a67170/" >Linked In</a>
+      </li>
+      <li>
+        <a href="https://kuldeepsinghsidhu.esy.es/SimplexSolver" >Home</a>
+      </li>
+      <li>
+        Version 1.0.1
+      </li>
+    </ul>
+  </div>
+</div>
+</center>
+<center><font class = "SmallColor">Email: <a href="mailto:singhsidhukuldeep@gmail.com">singhsidhukuldeep@gmail.com</a>
+<br> Copyright &#169  <a href="http://kuldeepsinghsidhu.esy.es" target="_self">Kuldeep Singh Sidhu</a></font>
+<br><a href="#top">Top of Page</a></center><br>
+
+
+	
+<!--#########################################-->
+
+
+
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../../platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-386.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+
+
+  </body>
+
+<!-- Mirrored from kristopolous.github.io/BOOTSTRA.386/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Jun 2017 10:30:57 GMT -->
+</html>
