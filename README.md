@@ -21,8 +21,8 @@ _You will just need a browser to run the solver._
 
 1. `Download` or `Clone` the complete directory to your machine.
 2. Run `Index.html`
-3. Or you can directly visit [Simplex Solver](http://kuldeepsinghsidhu.esy.es/SimplexSolver)
-`kuldeepsinghsidhu.esy.es/SimplexSolver`
+3. Or you can directly visit [Simplex Solver](http://kuldeepsinghsidhu.com/SimplexSolver)
+`kuldeepsinghsidhu.com/SimplexSolver`
 
 ![Landing Page](https://github.com/singhsidhukuldeep/SimplexSolver/raw/master/SimplexSolver/landing_page.png)
 
@@ -138,14 +138,15 @@ This gives error alert in case the program crashes.
 Gives the solution or the error messages.
 
 ## CREDITS
-Kuldeep Singh Sidhu
+
+>Kuldeep Singh Sidhu
 
 Github: [github/singhsidhukuldeep](https://github.com/singhsidhukuldeep)
 `https://github.com/singhsidhukuldeep`
 
-Website: [Kuldeep Singh Sidhu (Website)](http://kuldeepsinghsidhu.esy.es)
-`http://kuldeepsinghsidhu.esy.es`
+Website: [Kuldeep Singh Sidhu (Website)](http://kuldeepsinghsidhu.com)
+`http://kuldeepsinghsidhu.com`
 
-LinkedIn: [Kuldeep Singh Sidhu (LinkedIn)](https://www.linkedin.com/in/kuldeep-singh-sidhu-96a67170/)
-`https://www.linkedin.com/in/kuldeep-singh-sidhu-96a67170/`
+LinkedIn: [Kuldeep Singh Sidhu (LinkedIn)](https://www.linkedin.com/in/singhsidhukuldeep/)
+`https://www.linkedin.com/in/singhsidhukuldeep/`
 
